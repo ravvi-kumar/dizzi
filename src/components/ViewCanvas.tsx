@@ -1,8 +1,9 @@
 "use client";
 
 import { Canvas } from "@react-three/fiber";
-import { SodaCan } from "./SodaCan";
-import { EnvironmentCube, Float } from "@react-three/drei";
+import { EnvironmentCube } from "@react-three/drei";
+
+import FloatingCan from "@/components/FloatingCan";
 
 type Props = {};
 
@@ -25,14 +26,7 @@ export default function ViewCanvas({}: Props) {
         fov: 30,
       }}
     >
-      <Float
-        speed={1}
-        rotationIntensity={2}
-        floatIntensity={1}
-        floatingRange={[-0.1, 0.1]}
-      >
-        <SodaCan />
-      </Float>
+      <FloatingCan />
       <EnvironmentCube files={"./hdrs/lobby.hdr"} environmentIntensity={1.5} />
     </Canvas>
   );
