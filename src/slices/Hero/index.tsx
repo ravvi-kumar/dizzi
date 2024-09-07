@@ -46,6 +46,11 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
         opacity: 0,
         y: 10,
         duration: 0.6,
+      })
+      .from(".hero-button", {
+        opacity: 0,
+        y: 10,
+        duration: 0.6,
       });
 
     const scrollTl = gsap.timeline({
