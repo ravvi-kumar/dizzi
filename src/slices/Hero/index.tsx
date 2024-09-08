@@ -33,7 +33,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
 
   useGSAP(
     () => {
-      if (!ready && !isDesktop) return;
+      if (!ready && isDesktop) return;
 
       const introTl = gsap.timeline();
 
